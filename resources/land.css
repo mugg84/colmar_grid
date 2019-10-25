@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    width: 100%;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-size: 1.1em;
+    color: rgb(51, 54, 54);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* nav bar */
+
+nav {
+    display: grid;
+    grid-template: 64px / 30% 70%;
+}
+
+.navMobile {
+    display: none;
+}
+
+.logoList {
+    justify-self: end;
+    align-self: center;
+}
+
+.logoList a{
+    text-decoration: none;
+    color: black;
+    padding: 0 0.5em;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo p {
+    font-size: 1.8em;
+}
+
+.logo img {
+    width: 10%;
+    padding-left: 1.5em;
+}
+
