@@ -1,15 +1,31 @@
 body {
-    margin: 0;
     font-family: 'Nanum Gothic', 'Arimo', sans-serif;
     font-size: 1.2em;
     color: rgb(51, 54, 54);
 }
 
+* { 
+    margin: 0;
+    line-height: 1.5em;
+}
 
+p {
+    font-size: small;
+    padding: 10px 0 10px 0;
+}
+
+h2 {
+    padding-bottom: 16px;;
+}
+
+h4,
+h6 {
+    padding-top: 16px;
+}
 
 a {
     text-decoration: none;
-    color: black;
+    color: rgb(51, 54, 54);
 }
 
 
@@ -18,16 +34,17 @@ a {
 .container {
     display: grid;
     width: 1200px;
-    margin: 0;
+    border: 1px solid rgb(211, 211, 211);
     grid-template-areas: "nav nav"
         "leftFirst rigthFirst"
         "leftSec rightSec"
-        "rowFirst rowFirst"
-        "rowSec rowSec"
+        "titleOne titleOne"
+        "lists lists"
+        "titleTwo titleTwo"
         "leftFor rightFor"
         "foot foot";
     grid-template-columns: 60% 40%;
-    grid-template-rows: 60px 550px 600px 650px 550px 60px;
+    grid-template-rows: 60px 550px 647px 60px 815px 60px 600px 60px;
 
 }
 
@@ -51,13 +68,16 @@ nav {
     grid-area: rightSec;
 }
 
-
-.rowFirst {
-    grid-area: rowFirst;
+.titleOne {
+    grid-area: titleOne;
 }
 
-.rowSec {
-    grid-area: rowSec;
+.lists {
+    grid-area: lists;
+}
+
+.titleTwo {
+    grid-area: titleTwo;
 }
 
 .rightFor {
@@ -106,6 +126,11 @@ nav a {
     padding: 0.5em;
 }
 
+nav p {
+    font-size: medium;
+    align-self: center;
+}
+
 /* first part */
 
 .leftFirst,
@@ -114,10 +139,8 @@ nav a {
 }
 
 .leftFirst img {
-    object-fit: cover;
-    width: 92%;
-    max-height: 92%;
-    padding: 24px;
+    width: 91%;
+    padding: 32px 24px;
 }
 
 .rightFirst {
@@ -140,7 +163,6 @@ h1 {
 button {
     background-color: rgb(80, 80, 80);
     border: none;
-    ;
     padding: 1em 8.5em;
 }
 
@@ -150,28 +172,22 @@ button a {
 
 /* second part */
 
+.imageMobile {
+    display: none
+}
+
 .leftSec img {
-    object-fit: cover;
-    width: 92%;
-    max-height: 92%;
+    width: 91%;
     padding: 32px 24px 32px 24px;
 }
 
-.imageFull {
+.note img {
     width: 100%;
     height: auto;
 }
 
 .quote {
     padding: 0 24px 0 32px;
-}
-
-.quote p {
-    font-size: small;
-}
-
-.quote h2 {
-    margin-top: 0;
 }
 
 .note {
@@ -183,11 +199,6 @@ button a {
     row-gap: 1em;
 }
 
-.note p, 
-.note a {
-    font-size: small;
-}
-
 .note a {
     color: blue;
 }
@@ -196,31 +207,89 @@ button a {
     align-self: center;
 }
 
-.info h4 {
-    margin: 0;
+.signature {
+    padding: 24px 0 32px 0;
+}
+/* third part */
+
+.titleOne {
+    align-self: center;
+}
+
+.titleOne h2 {
+    align-self: center;
+    text-align: center;
+    background-color: rgb(211, 211, 211);
+    padding: 32px 0;
+}
+
+.text {
+    padding: 0 24px 24px 24px;
 }
 
 
-* {
-    border: 1px solid black;
+.list {
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: 50% 50%;
+    background-color: white;
+    justify-content: center;
 }
 
-
-
-
-.rowFirst,
-.rowSecond,
-.leftFor,
-.rightFor {
-    display: none;
+.display img {
+    width: 100%;
+    height: auto;
 }
 
-.imageMobile {
-    display: none
+.display {
+    margin: 1em;
+    width: 90%;
+    border: 1px solid rgb(211, 211, 211);
+}
+
+/* fourth part */
+
+.titleTwo {
+    align-self: center;
+}
+
+.titleTwo h2 {
+    align-self: center;
+    text-align: center;
+    padding: 32px 0;
 }
 
 video {
-    object-fit: cover;
-    width: 100%;
-    max-height: 100%;
+    width: 94.4%;
+    padding: 32px 0 24px 24px;
 }
+
+.rightFor .note {
+    padding-bottom: 0;
+}
+
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgb(211, 211, 211);
+}
+
+footer a {
+    font-size: small;
+    padding: 0.5em;
+}
+
+footer p {
+    align-self: center;
+}
+
+
+
+
+
+
+
+
