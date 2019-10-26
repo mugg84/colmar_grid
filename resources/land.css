@@ -1,48 +1,175 @@
 body {
     margin: 0;
-    width: 100%;
-    font-family: 'Hind Vadodara', sans-serif;
+    font-family: 'Nanum Gothic', 'Arimo', sans-serif;
     font-size: 1.1em;
     color: rgb(51, 54, 54);
+    
 }
 
-a {
-    text-decoration: none;
+/* grid */
+
+.container {
+    display: grid;
+    width: 1000px;
+    margin: 0;
+    grid-template-areas: "nav nav"
+        "leftFirst rigthFirst"
+        "leftSec rightSec"
+        "rowFirst rowFirst"
+        "rowSec rowSec"
+        "leftFor rightFor"
+        "foot foot";
+    grid-template-columns: 600px 400px;
+    grid-template-rows: 60px 475px 550px 650px 550px  60px;
+ 
 }
+
+nav {
+    grid-area: nav;
+}
+
+.leftFirst {
+    grid-area: leftFirst;
+}
+
+.rightFirst {
+    grid-area: rigthFirst;
+}
+
+.leftSec {
+    grid-area: leftSec;
+}
+
+.rightSec {
+    grid-area: rightSec;
+}
+
+
+.rowFirst {
+    grid-area: rowFirst;
+}
+
+.rowSec {
+    grid-area: rowSec;
+}
+
+.rightFor {
+    grid-area: rightFor;
+}
+
+.leftFor {
+    grid-area: leftFor;
+}
+
+footer {
+    grid-area: foot;
+}
+
 
 /* nav bar */
 
-nav {
-    display: grid;
-    grid-template: 64px / 30% 70%;
-}
 
 .navMobile {
     display: none;
 }
 
-.logoList {
-    justify-self: end;
-    align-self: center;
-}
 
-.logoList a{
-    text-decoration: none;
-    color: black;
-    padding: 0 0.5em;
+nav {
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .logo {
     display: flex;
-    align-items: center;
+    white-space: nowrap;
+    padding-left: 1.4em;
 }
 
-.logo p {
-    font-size: 1.8em;
+.logoList {
+    align-self: center;
+    padding: 0 0.9em;
 }
 
 .logo img {
-    width: 10%;
-    padding-left: 1.5em;
+    width: 17%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5em;
+}
+
+/* first part */
+
+.leftFirst, .rightFirst {
+    background-color: rgb(211, 211, 211);
+}
+
+.leftFirst img {
+    object-fit: cover;
+    width: 94%;
+    max-height: 94%;
+    padding: 1em;
+}
+
+.rightFirst {
+    display: grid;
+    align-items: center;
+}
+
+.content {
+    font-size: 1.15em;
+}
+
+.content h3 {
+    padding: 0.7em 0;
+}
+
+.content > * {
+        margin: auto;
+        padding-left: 
+    }
+
+button {
+    background-color: rgb(80, 80, 80);
+    border: none;;
+    padding: 0.5em 8.5em;
+}
+
+button a {
+    color: white;
+}
+
+
+* {borer: 1px solid black;}
+
+
+
+/* second part */
+
+.leftSec img {
+    object-fit: cover;
+    width: 94%;
+    max-height: 94%;
+    padding: 1em;
+}
+
+.rightSec img {
+    width: 30%;
+}
+
+
+
+
+.imageMobile {
+    display: none
+}
+
+video {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
 }
 
