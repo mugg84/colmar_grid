@@ -157,7 +157,7 @@ h1 {
     padding: 1em 3em 1em 0;
 }
 
-.content > * {
+.content>* {
     margin: auto;
 }
 
@@ -182,7 +182,7 @@ button a {
     padding: 32px 24px 32px 24px;
 }
 
-.note img {
+.imageFull {
     width: 92%;
     height: auto;
 }
@@ -265,17 +265,17 @@ button a {
     padding: 32px 0;
 }
 
-video {
-    width: 93.9%;
-    padding: 0 0 24px 24px;
-}
-
 .rightFor .note {
     padding: 0;
 }
 
 #adjust {
     padding-top: 1em;
+}
+
+video {
+    width: 93.9%;
+    padding: 0 0 24px 24px;
 }
 
 /* footer */
@@ -298,7 +298,7 @@ footer p {
 /* resizing */
 
 @media screen and (max-width: 600px) {
-    
+
     p {
         font-size: large;
     }
@@ -309,6 +309,10 @@ footer p {
 }
 
 @media screen and (max-width: 450px) {
+
+    p {
+        font-size: medium;
+    }
 
     .container {
         width: 450px;
@@ -322,13 +326,12 @@ footer p {
             "leftFor"
             "foot";
         grid-template-columns: 100%;
-        grid-template-rows: 60px 350px 290px 744px 60px 810px 105px 650px 60px;
-    
+        grid-template-rows: 60px 350px 290px 1020px 70px 580px 103px 276px 60px;
     }
 
-     /* nav */
+    /* nav */
 
-    .logo,
+    nav .logo,
     .logoList {
         display: none;
     }
@@ -364,12 +367,8 @@ footer p {
         padding: 24px;
     }
 
-    .lists {
-        display: none;
-    }
-
     .rightFirst {
-        padding: 0 24px;
+        padding: 0 24px 24px 24px;
     }
 
     h1 {
@@ -382,26 +381,90 @@ footer p {
 
     button {
         display: block;
-        padding: 16px 180px;
+        padding: 16px 170px;
         background-color: rgb(140, 140, 140);
         white-space: nowrap;
     }
 
     /* second part */
 
-    .imageFull {
+    .imageFull,
+    .leftSec {
         display: none;
     }
 
     .imageMobile {
         display: block;
+        width: 100%;
     }
 
     .note {
-        gr
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr;
+        row-gap: 0;
+        padding: 32px;
     }
 
-    .leftSec,
-    .rightFor {display: none;}
+    .info h4 {
+        padding: 16px 0 10px 0;
+    }
+
+    .info p {
+        padding: 0 0 10px 0;
+    }
+
+    /* third part */
+
+    .display h6,
+    .display p,
+    .display img {
+        display: none;
+    }
+
+    .titleOne {
+        border-top: 1px solid rgb(211, 211, 211);
+    }
+
+    .titleOne h2,
+    .lists {
+        background-color: white;
+    }
+
+    .display {
+        background-color: rgb(211, 211, 211);
+        margin: 8px auto;
+    }
+
+    .list {
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 100%;
+        padding: 24px 0;
+    }
+
+    /* fourth part */
+
+    .rightFor,
+    .quote {
+        display: none;
+    }
+
+    .titleTwo {
+        border-top: 1px solid rgb(211, 211, 211);
+    }
+
+    video {
+        width: 100%;
+        padding: 0 0;
+    }
+
+/* footer */
+
+footer {
+    border-top: none;
+}
+
+.logo p{
+    font-size: x-small;
+}
 
 }
