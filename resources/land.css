@@ -37,7 +37,7 @@ a {
     width: 1400px;
     border: 1px solid rgb(211, 211, 211);
     grid-template-areas: "nav nav"
-        "leftFirst rigthFirst"
+        "leftFirst rightFirst"
         "leftSec rightSec"
         "titleOne titleOne"
         "lists lists"
@@ -45,7 +45,7 @@ a {
         "leftFor rightFor"
         "foot foot";
     grid-template-columns: 60% 40%;
-    grid-template-rows: 60px 630px 744px 60px 800px 105px 620px 60px;
+    grid-template-rows: 60px 630px 744px 60px 810px 105px 650px 60px;
 
 }
 
@@ -58,7 +58,7 @@ nav {
 }
 
 .rightFirst {
-    grid-area: rigthFirst;
+    grid-area: rightFirst;
 }
 
 .leftSec {
@@ -145,7 +145,6 @@ nav p {
 }
 
 .rightFirst {
-    display: grid;
     align-items: center;
 }
 
@@ -157,7 +156,7 @@ h1 {
     padding: 1em 3em 1em 0;
 }
 
-.content>* {
+.content > * {
     margin: auto;
 }
 
@@ -229,7 +228,7 @@ button a {
     padding: 0 24px 24px 24px;
 }
 
-.lists{
+.lists {
     background-color: rgb(211, 211, 211);
 }
 
@@ -295,5 +294,99 @@ footer p {
     align-self: center;
 }
 
+/* resizing */
+
+@media screen and (max-width: 600px) {
+    
+    p {
+        font-size: large;
+    }
+
+    .list {
+        grid-template-columns: 300px 300px 300px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .container {
+        display: grid;
+        width: 450px;
+        border: 1px solid rgb(211, 211, 211);
+        grid-template-areas: "nav"
+            "leftFirst"
+            "rightFirst"
+            "rightSec"
+            "titleOne"
+            "lists"
+            "titleTwo"
+            "leftFor"
+            "foot";
+        grid-template-columns: 100%;
+        grid-template-rows: 60px 350px 290px 744px 60px 810px 105px 650px 60px;
+    
+    }
+
+     /* nav */
+
+    .logo,
+    .logoList {
+        display: none;
+    }
+
+    .navMobile {
+        display: flex;
+        padding: 0;
+    }
+
+    ul {
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    li img {
+        width: 140%;
+        padding-top: 12px;
+    }
+
+    li a {
+        padding: 0;
+    }
+
+    /* first part */
+
+    .leftFirst img {
+        width: 90%;
+        padding: 24px;
+    }
+
+    .lists {
+        display: none;
+    }
+
+    .rightFirst {
+        padding: 0 24px;
+    }
+
+    h1 {
+        padding-right: 0;
+    }
+
+    .content h3 {
+        padding: 12px 24px 12px 0;
+    }
+
+    button {
+        display: block;
+    }
 
 
+    .leftSec,
+    .rightFor {display: none;}
+
+}
