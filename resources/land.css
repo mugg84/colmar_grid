@@ -4,18 +4,19 @@ body {
     color: rgb(51, 54, 54);
 }
 
-* { 
+* {
     margin: 0;
     line-height: 1.5em;
 }
 
 p {
-    font-size: small;
+    font-size: x-small;
     padding: 10px 0 10px 0;
 }
 
 h2 {
-    padding-bottom: 16px;;
+    padding-bottom: 16px;
+    ;
 }
 
 h4,
@@ -33,7 +34,7 @@ a {
 
 .container {
     display: grid;
-    width: 1200px;
+    width: 1400px;
     border: 1px solid rgb(211, 211, 211);
     grid-template-areas: "nav nav"
         "leftFirst rigthFirst"
@@ -44,7 +45,7 @@ a {
         "leftFor rightFor"
         "foot foot";
     grid-template-columns: 60% 40%;
-    grid-template-rows: 60px 550px 647px 60px 815px 60px 600px 60px;
+    grid-template-rows: 60px 630px 744px 60px 800px 105px 620px 60px;
 
 }
 
@@ -182,7 +183,7 @@ button a {
 }
 
 .note img {
-    width: 100%;
+    width: 92%;
     height: auto;
 }
 
@@ -190,12 +191,15 @@ button a {
     padding: 0 24px 0 32px;
 }
 
+.signature {
+    padding: 24px 0 32px 0;
+}
+
 .note {
     display: grid;
-    padding: 32px;
+    padding: 32px 0 32px 0;
     grid-template-columns: 40% 60%;
     grid-template-rows: 1/3 1/3 1/3;
-    column-gap: 1em;
     row-gap: 1em;
 }
 
@@ -205,11 +209,9 @@ button a {
 
 .info {
     align-self: center;
+    padding-left: 24px;
 }
 
-.signature {
-    padding: 24px 0 32px 0;
-}
 /* third part */
 
 .titleOne {
@@ -227,13 +229,15 @@ button a {
     padding: 0 24px 24px 24px;
 }
 
+.lists{
+    background-color: rgb(211, 211, 211);
+}
 
 .list {
     display: grid;
     height: auto;
     grid-template-columns: repeat(3, 30%);
     grid-template-rows: 50% 50%;
-    background-color: white;
     justify-content: center;
 }
 
@@ -245,7 +249,8 @@ button a {
 .display {
     margin: 1em;
     width: 90%;
-    border: 1px solid rgb(211, 211, 211);
+    background-color: white;
+
 }
 
 /* fourth part */
@@ -261,17 +266,21 @@ button a {
 }
 
 video {
-    width: 94.4%;
-    padding: 32px 0 24px 24px;
+    width: 93.9%;
+    padding: 0 0 24px 24px;
 }
 
 .rightFor .note {
-    padding-bottom: 0;
+    padding: 0;
+}
+
+#adjust {
+    padding-top: 1em;
 }
 
 /* footer */
 
-footer{
+footer {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid rgb(211, 211, 211);
@@ -285,11 +294,6 @@ footer a {
 footer p {
     align-self: center;
 }
-
-
-
-
-
 
 
 
