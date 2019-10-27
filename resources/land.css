@@ -146,6 +146,7 @@ nav p {
 
 .rightFirst {
     align-items: center;
+    display: flex;
 }
 
 h1 {
@@ -310,9 +311,7 @@ footer p {
 @media screen and (max-width: 450px) {
 
     .container {
-        display: grid;
         width: 450px;
-        border: 1px solid rgb(211, 211, 211);
         grid-template-areas: "nav"
             "leftFirst"
             "rightFirst"
@@ -383,8 +382,24 @@ footer p {
 
     button {
         display: block;
+        padding: 16px 180px;
+        background-color: rgb(140, 140, 140);
+        white-space: nowrap;
     }
 
+    /* second part */
+
+    .imageFull {
+        display: none;
+    }
+
+    .imageMobile {
+        display: block;
+    }
+
+    .note {
+        gr
+    }
 
     .leftSec,
     .rightFor {display: none;}
